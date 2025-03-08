@@ -441,3 +441,24 @@ h3.side-line {
   padding-top: 0;
   padding: 20px;
 }
+.section4 {
+  background: url(../images/pattern-1.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding-bottom: 100px;
+}
+/* section 5 */
+.section5 {
+  background-color: var(--black-color);
+  padding: 30px;
+}
+.section5 h2 {
+  font-size: 32px;
+  text-align: center;
+  color: var(--yellow-orange-color);
+  margin-bottom: 30px;
+}
+.section5 img {
+  width: 100%;
+}
