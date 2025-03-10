@@ -67,3 +67,53 @@ setInterval(timer, 1000);
     elem.style.backgroundPosition = x;
   }
 })();
+const counters = document.querySelectorAll(".counter span");
+const container = document.querySelector(".counters");
+
+let active = false;
+
+window.addEventListener("scroll", () => {
+  if (
+    window.pageYOffset > container.offsetTop - container.offsetHeight - 500 &&
+    !active
+  ) {
+    counters.forEach((counter) => {
+      counter.innerHTML = 0;
+      let count = 0;
+      const target = parseInt(counter.dataset.count);
+      const increment = Math.ceil(target / 100); // Adjust step size dynamically
+
+      const updateCount = () => {
+        if (count < target) {
+          count += increment;
+          if (count > target) count = target; // Ensure it stops exactly at target
+          counter.innerHTML = count.toLocaleString(); // Format large numbers
+          setTimeout(updateCount, 15);
+        }
+      };
+
+      updateCount();
+    });
+
+    active = true;
+  } else if (
+    window.pageYOffset < container.offsetTop - container.offsetHeight - 500 &&
+    active
+  ) {
+    counters.forEach((counter) => {
+      counter.innerHTML = 0;
+    });
+    active = false;
+  }
+});
+
+document.querySelectorAll(".question").forEach((item) => {
+  item.addEventListener("click", () => {
+    document.querySelectorAll(".faq").forEach((faq) => {
+      if (faq !== item.parentNode) {
+        faq.classList.remove("active");
+      }
+    });
+    item.parentNode.classList.toggle("active");
+  });
+});
