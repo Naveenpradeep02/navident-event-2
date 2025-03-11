@@ -32,12 +32,13 @@ body {
 }
 /*  */
 header {
-  background-color: var(--dark-blue-color);
+  background-color: transparent;
+  width: 100%;
   height: 5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0;
   transition: background-color 0.4s ease-in-out;
   padding: 0px 150px;
@@ -67,15 +68,28 @@ header.scrolled nav .time {
 }
 /* hero */
 .section1 {
-  padding-top: 3rem;
-  background: url(../images/bg-img.jpg);
+  /* padding-top: 3rem; */
+  background: url(../images/bg-7.png);
   background-position: center;
   background-size: cover;
-  height: 100vh;
   width: 100%;
+  padding-bottom: 150px;
+}
+.section1-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.section-1-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-1-img img {
+  width: 900px;
 }
 .text-container {
   padding-top: 150px;
+  padding-left: 150px;
   position: static;
   z-index: 10;
 }
