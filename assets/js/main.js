@@ -17,7 +17,7 @@ const Hours1 = document.getElementById("hours1");
 const Minutes1 = document.getElementById("minutes1");
 const Seconds1 = document.getElementById("seconds1");
 
-const targetedDate = new Date("May 1 ,2025 22:30:00").getTime();
+const targetedDate = new Date("june 5 ,2025 22:30:00").getTime();
 const timer = () => {
   const CurrentDate = new Date().getTime();
   const distance = targetedDate - CurrentDate;

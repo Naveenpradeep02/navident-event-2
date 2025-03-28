@@ -9,13 +9,15 @@
   --white-color: #fff;
   --gradient-color: linear-gradient(
     to left,
-    rgba(255, 166, 0, 0.796),
-    rgba(128, 0, 128, 0.529),
+    black,
+    #4dabf7,
     rgba(255, 0, 0, 0.722)
   );
   /* --dark-blue-color: #00348f; */
-  --dark-blue-color: #5b2aa3;
-  --yellow-orange-color: #ffc403;
+  /* --dark-blue-color: #5b2aa3; */
+  --dark-blue-color: #020202;
+  /* --yellow-orange-color: #ffc403; */
+  --yellow-orange-color: #4dabf7;
 }
 * {
   margin: 0;
@@ -280,7 +282,8 @@ header.scrolled nav .time {
 }
 /* section-3 */
 .section3 {
-  background: url(../images/bg-img.jpg);
+  /* background: url(../images/bg-img.jpg); */
+  background: url(../images/section-pg.png);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -333,6 +336,7 @@ header.scrolled nav .time {
   color: var(--yellow-orange-color);
 }
 .person-img h4 {
+  color: rgb(228, 226, 226);
   padding: 0 20px;
 }
 .title {
@@ -414,18 +418,15 @@ header.scrolled nav .time {
 .time-box:hover .over-lay-box {
   background: linear-gradient(
     to left,
-    rgba(255, 166, 0, 0.796),
-    rgba(128, 0, 128, 0.529),
-    rgba(255, 0, 0, 0.722)
+    rgba(0, 0, 0, 0.651),
+    #4dabf7,
+    rgba(82, 116, 238, 0.722)
   );
   transform: translateY(0px);
   transition: all 0.5s ease-in-out;
 }
 .time-box:hover .sp-det h2 {
-  background: -webkit-linear-gradient(
-    rgba(255, 166, 0, 0.796),
-    rgba(255, 0, 0, 0.722)
-  );
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.437), #4dabf7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.5s ease-in-out;
@@ -503,7 +504,7 @@ h3.side-line {
   width: 80px;
   height: 80px;
   text-align: center;
-  background-color: var(--dark-blue-color);
+  background-color: var(--yellow-orange-color);
   display: grid;
   place-items: center;
 }
@@ -631,7 +632,7 @@ h3.side-line {
   padding: 20px;
 }
 .section11 {
-  background: url(../images/bg-img.jpg) no-repeat;
+  background: url(../images/section-pg.png) no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
